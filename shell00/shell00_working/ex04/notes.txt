@@ -1,0 +1,13 @@
+# things i need
+
+
+1. list files and folders of the current folder but not hidden files "." or ".."            ls no -a
+2. list them separated by commas                                    -m 
+3. sorted by date of modification and                               -t
+4. so that folders are followed by a slash /
+
+ls
+
+
+
+
