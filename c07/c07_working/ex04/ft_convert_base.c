@@ -6,7 +6,7 @@
 /*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 09:17:57 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/08/30 18:22:57 by dpentlan         ###   ########.fr       */
+/*   Updated: 2022/08/31 16:46:20 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ char	*ft_convert_base_2(char *nbr, char *base_from, char *base_to, int mult)
 		/ base_to_len) + 3);
 	if (!ret_str)
 		return (NULL);
-	ft_putnbr_base(((int)base_ten), base_to, ret_str);
+	ret_str[0] = '\0';
+	ft_putnbr_base((int)base_ten, base_to, ret_str);
 	return (ret_str);
 }
 
@@ -118,10 +119,12 @@ int	main(int argc, char **argv)
 	char	*result;
 
 	(void)argc;
+	result = 0;
 	result = ft_convert_base(argv[1], argv[2], argv[3]);
 	printf("results from program: %s\n", result);
 	free(result);
 }
+
 /*
 #include <stdio.h>
 

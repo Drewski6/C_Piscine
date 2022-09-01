@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpentlan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 22:27:13 by dpentlan          #+#    #+#             */
-/*   Updated: 2022/08/31 00:33:36 by dpentlan         ###   ########.fr       */
+/*   Created: 2022/08/30 23:33:22 by dpentlan          #+#    #+#             */
+/*   Updated: 2022/08/31 00:05:23 by dpentlan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#include <stdio.h>
+#include "ft_stock_str.h"
 
-typedef struct s_point {
-	int	x;
-	int	y;
-}	t_point;
+void				ft_show_tab(struct s_stock_str *par);
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
 
-void	set_point(t_point *point);
+int main(int argc, char **argv)
+{
+	t_stock_str	*stock;
 
-#endif
+	stock = ft_strs_to_tab(argc, argv);
+	ft_show_tab(stock);
+}
